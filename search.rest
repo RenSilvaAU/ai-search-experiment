@@ -1,0 +1,15 @@
+
+@baseUrl = <<search url>>
+@apiKey = <<search key>>
+### Run a query
+POST {{baseUrl}}/indexes/hotels-index/docs/search?api-version=2024-07-01  HTTP/1.1
+  Content-Type: application/json
+   api-key: {{apiKey}}
+
+  {
+      "search": "*",
+      "select": "id, content",
+      "searchFields": "Description",
+      "count": true,
+      "orderby": "id asc" 
+  }

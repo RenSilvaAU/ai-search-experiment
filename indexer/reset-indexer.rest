@@ -1,0 +1,6 @@
+@baseUrl = <<search url>>
+@apiKey = <<search key>>
+
+POST {{baseUrl}}/indexers/hotels-indexer/reset?api-version=2024-07-01
+    Content-Type: application/json
+    api-key: {{apiKey}}

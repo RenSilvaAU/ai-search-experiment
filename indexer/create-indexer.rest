@@ -1,0 +1,22 @@
+@baseUrl = <<search url>>
+@apiKey = <<search key>>
+
+PUT {{baseUrl}}/indexers/hotels-indexer?api-version=2024-07-01
+   Content-Type: application/json
+   api-key: {{apiKey}}
+
+{
+    "name": "hotels-indexer",
+    "dataSourceName": "hotels-datasource",
+    "targetIndexName": "hotels-index",
+    "fieldMappings": [],
+    "parameters": {
+        "maxFailedItems": -1,
+        "maxFailedItemsPerBatch": -1,
+        "configuration": {
+            "indexedFileNameExtensions" : ".csv,.CSV",
+            "parsingMode": "delimitedText",
+            "firstLineContainsHeaders": true
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "rest-client.environmentVariables": {
+        "$shared": {
+            "baseUrl": "<<search url>>",
+            "apiKey": "<<search key>>"
+        }
+    }
+}
